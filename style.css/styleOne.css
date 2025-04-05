@@ -154,9 +154,94 @@ body {
 
 .footer {
     min-height: 560px;
-    /* background-color: rgb(33, 33, 33); */
+    background-color: rgb(33, 33, 33);
     border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
 
+}
+
+.footer_menu_one {
+    max-width: 80vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid gray;
+}
+.create {
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+}
+.started {
+    max-width: 130px;
+    width: 100%;
+    cursor: pointer;
+    padding: 18px;
+    border-radius: 8px;
+    border: 3px solid white;
+    background-color: rgb(33, 33, 33);
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    margin-left: 50px;
+}
+.footer_menu_two {
+    max-width: 80vw;
+    width: 100%;
+    display: flex;
+    padding: 20px 0;
+}
+.footer_menu_two_links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 375px;
+    width: 100%;
+}
+.footer_heading {
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+}
+.footer_link {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 300;
+}
+.followUs {
+    max-width: 80vw;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px 0;
+}
+.social_media {
+    display: flex;
+    justify-content: space-between;
+    
+}
+.icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+}
+.appStore {
+    display: flex;
+    gap: 20px;
+}
+.footer_menu_three {
+    max-width: 80vw;
+    width: 100%;
+    display: flex;
+    gap: 50px;
+    margin-top: 30px;
 }
 
 
