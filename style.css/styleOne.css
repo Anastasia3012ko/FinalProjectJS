@@ -69,7 +69,7 @@ body {
 .city {
     border-left: 1px solid rgb(217, 217, 217);
 }
-.search_input:focus {
+.search_input:focus, .language_name:focus {
     outline: none;
 }
 .authorization {
@@ -87,6 +87,9 @@ body {
     justify-content: center;
     align-items: center;
     gap: 8px;
+}
+.language_name {
+    border: none;
 }
 .login {
     background-color: white;
@@ -294,7 +297,7 @@ body {
     .authorization {
         right: 0;
         gap: 3px;
-        max-width: 200px;
+        max-width: 220px;
         
     }
     .login {
