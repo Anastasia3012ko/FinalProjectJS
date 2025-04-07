@@ -5,12 +5,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Second page</title>
     <link rel="stylesheet" href="style.css/styleTwo.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="script/scriptPageTwo.js" defer></script>
 </head>
 <body>
-    <h1>second page</h1>
+    <div class="wrapper">
+        <header id="header" class="header">
+            <div class="navbar">
+                <img id="companyLogo" src="images/Meetup.png" alt="logo">
+                <div class="search">
+                    <span class="material-symbols-outlined">search</span>
+                    <input class="search_input" type="text" placeholder="Search events">
+                    <input class="search_input city" type="text" placeholder="Mountain View, CA">
+                    <span class="material-symbols-outlined loop">search</span>
+                </div>
+                <div class="authorization">
+                    <div class="language">
+                        <span class="material-symbols-outlined language_symbol">language</span> 
+                        <select class="language_name" name="languages">
+                            <option value="English" selected>English</option>
+                            <option value="German">German</option>
+                            <option value="Russian">Russian</option>
+                            <option value="French">French</option>
+                            <option value="Spanish">Spanish</option>
+                        </select>
+                    </div>
+                    <button class="login">Log in</button>
+                    <button class="singup btn">Sing up</button>
+                </div>
+             </div>
+        </header>
 
-    <!-- <a href="index.html"><button>Returt to main page</button></a> -->
+        <main>
+
+        </main>
+
+        <footer class="footer">
+            <div class="footer_menu_one">
+                <p class="create">Create your own Meetup group.</p>
+                <button class="started">Get Started</button>
+        
+            </div>
+            <div class="footer_menu_two">
+                <div class="footer_menu_two_links">
+                    <h4 class="footer_heading">Your Account</h4>
+                    <a class="footer_link" href="#" target="_blank">Sign up</a>
+                    <a class="footer_link" href="#" target="_blank">Log in</a>
+                    <a class="footer_link" href="#" target="_blank">Help</a>
+                    <a class="footer_link" href="#" target="_blank">Become an Affiliate</a>
+                </div>
+                <div class="footer_menu_two_links">
+                    <h4 class="footer_heading">Discover</h4>
+                    <a class="footer_link" href="#" target="_blank">Groups</a>
+                    <a class="footer_link" href="#" target="_blank">Calendar</a>
+                    <a class="footer_link" href="#" target="_blank">Topics</a>
+                    <a class="footer_link" href="#" target="_blank">Cities</a>
+                    <a class="footer_link" href="#" target="_blank">Online Events</a>
+                    <a class="footer_link" href="#" target="_blank">Local Guides</a>
+                    <a class="footer_link" href="#" target="_blank">Make Friends</a>
+                </div>
+                <div class="footer_menu_two_links">
+                    <h4 class="footer_heading">Meetup</h4>
+                    <a class="footer_link" href="#" target="_blank">About</a>
+                    <a class="footer_link" href="#" target="_blank">Blog</a>
+                    <a class="footer_link" href="#" target="_blank">Meetup Pro</a>
+                    <a class="footer_link" href="#" target="_blank">Careers</a>
+                    <a class="footer_link" href="#" target="_blank">Apps</a>
+                    <a class="footer_link" href="#" target="_blank">Podcast</a>
+                </div>
+            </div>
+            
+            <div class="followUs">
+                <h4 class="footer_heading">Follow us</h4>
+                <div class="social_media">
+                    <div class="icons">
+                        <a class="footer_link" href="https://www.facebook.com/" target="_blank"><img src="icons/Facebook.svg" alt=""></a>
+                        <a class="footer_link" href="https://www.Twitter.com/" target="_blank"><img src="icons/Twitter.svg" alt=""></a>
+                        <a class="footer_link" href="https://www.youTube.com/" target="_blank"><img src="icons/youTube.svg" alt=""></a>
+                        <a class="footer_link" href="https://www.instagram.com/" target="_blank"><img src="icons/Instagram.svg" alt=""></a>
+                        <a class="footer_link" href="https://www.tiktok.com" target="_blank"><img src="icons/TikTok.svg" alt=""></a>
+                    </div>
+                    <div class="appStore">
+                        <a href=""><img src="images/google.png" alt="googlePlay"></a>
+                        <a href=""><img src="images/appstore.png" alt="AppStore"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_menu_three">
+                <a class="footer_link" href="#" target="_blank">© 2024 Meetup</a>
+                <a class="footer_link forDesctop" href="#" target="_blank">Terms of Service</a>
+                <a class="footer_link forDesctop" href="#" target="_blank">Privacy Policy</a>
+                <a class="footer_link forDesctop" href="#" target="_blank">Do Not Sell or Share</a>
+                <a class="footer_link forDesctop" href="#" target="_blank">My Personal Data</a>
+                <a class="footer_link forDesctop" href="#" target="_blank">Cookie Policy</a>
+                <a class="footer_link forDesctop" href="#" target="_blank">Help</a>
+            </div>
+        </footer>
+
+    </div>
+    
+
+    
     
     <button id="btnReturn">Returt to main page</button>
     

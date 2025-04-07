@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+button, a {
+    cursor: pointer;
+}
+button, input, select {
+    border: none;
+}
+body {
+    font-family: "Roboto", sans-serif;
+    color: rgb(33, 33, 33);
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    overflow: clip;
+    min-height: 100%;
+    
+}
+
+/* header */
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+}
+.navbar {
+    padding: 15px 0 ;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 96%;
+    width: 100%;
+    position: relative;
+}
+
+.search {
+    display: flex;
+    border: 1px solid rgb(217, 217, 217);
+    border-radius: 8px;
+    position: absolute;
+    left: 8%;
+    padding-left: 10px;
+    max-width: 600px;
+    width: 100%;
+    
+
+}
+.material-symbols-outlined {
+    align-self: center;
+    border: none;
+}
+.loop {
+    background-color: rgb(246, 88, 88);
+    color: white;
+    min-height: 100%;
+    padding: 10px;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+}
+
+.search_input {
+    padding-left: 10px;
+    font-size: 16px;
+    max-width: 300px;
+    width: 100%;
+    color: rgb(112, 112, 112)
+}
+.city {
+    border-left: 1px solid rgb(217, 217, 217);
+}
+.search_input:focus, .language_name:focus {
+    outline: none;
+}
+.authorization {
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    font-size: 14px;
+    right: 25px;
+    max-width: 280px;
+    width: 100%;
+
+}
+.language {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+.login {
+    background-color: white;
+    border: none;
+    max-width: 85px;
+    width: 100%;
+}
+.singup {
+    max-width: 85px;
+    width: 100%;
+}
+.btn {
+    border-radius: 8px;
+    background-color: rgb(0, 121, 138);
+    color: white;
+    padding: 15px;
+    font-size: 14px;
+}
+
+/* main */
+
+.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 80vh;
+}
+
+/* footer */
+
+
+.footer {
+    min-height: 560px;
+    background-color: rgb(33, 33, 33);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer_menu_one, .footer_menu_two, .followUs, .footer_menu_three {
+   max-width: 80vw;
+   width: 100%; 
+   display: flex;
+}
+
+.footer_menu_one {
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid rgb(217, 217, 217);
+}
+.create {
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+}
+.started {
+    max-width: 130px;
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    border: 3px solid white;
+    background-color: rgb(33, 33, 33);
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    margin-left: 50px;
+}
+.footer_menu_two {
+    padding: 20px 0;
+}
+.footer_menu_two_links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 375px;
+    width: 100%;
+}
+.footer_heading {
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+}
+.footer_link {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 300;
+}
+.followUs {
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px 0;
+}
+.social_media {
+    display: flex;
+    justify-content: space-between;
+    
+}
+.icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+}
+.appStore {
+    display: flex;
+    gap: 20px;
+}
+.footer_menu_three {
+    gap: 50px;
+    margin-top: 30px;
+}
+
+@media all and (max-width: 1200px) {
+    .search {
+        left: 12%;
+    } 
+}
+@media all and (max-width: 1100px) {
+    .search {
+        top: 70px;
+        left: 10px;
+    }
+    .footer_menu_three {
+        gap: 10px;
+    }
+
+}
+@media all and (max-width: 500px) {
+    .header {
+        margin-bottom: 25px;
+    }
+    .navbar {
+        max-width: 90vw;
+        padding-top: 15px ;
+        padding-right: 0;
+    }
+    .city{
+        display: none;
+    }
+    .search {
+        max-width: 320px;
+        left: auto;
+    }
+    .authorization {
+        right: 0;
+        gap: 3px;
+        max-width: 220px;
+        
+    }
+    .login {
+        max-width: 70px;
+    }
+    .singup {
+        max-width: 70px;
+    }
+    .btn {
+        padding: 10px;
+        font-size: 12px;
+    }
+    .appStore, .forDesctop {
+        display: none;
+    } 
+    .footer_menu_one, .footer_menu_two, .followUs, .footer_menu_three {
+        max-width: 90vw;
+    }
+    .footer_menu_one {
+        justify-content: space-between;
+    }
+    .started {
+        margin-left: 0;
+        padding: 8px;
+    }
+
+    
+}
