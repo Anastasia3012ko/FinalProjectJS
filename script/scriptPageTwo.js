@@ -67,7 +67,7 @@ const eventsStore = [
   
 
   // formate date in Array
-    function formatedDate (date){
+    function formattedDate (date){
         const optionsOne = {
             weekday: 'short',
             month: 'short',
@@ -93,13 +93,16 @@ const eventsStore = [
     const eventsContainer = document.createElement('div')
     eventsContainer.classList.add('eventsContainer')
 
+    const textContainer = document.createElement('div')
+    textContainer.classList.add('textContainer')
+
     const eventPicture =  document.createElement('img')
     eventPicture.src = eventsStore[0].image
     eventPicture.classList.add('picture')
 
-    const dateEvent =  document.createElement('p')
-    dateEvent.textContent = formatedDate(eventsStore[0].date) 
-    dateEvent.classList.add('dateEvent')
+    const eventDate =  document.createElement('p')
+    eventDate.textContent = formattedDate(eventsStore[0].date) 
+    eventDate.classList.add('eventDate')
 
     const eventName = document.createElement('h3')
     eventName.textContent = eventsStore[0].title
@@ -116,8 +119,8 @@ const eventsStore = [
 
 
 
-
-    eventsContainer.append(eventPicture, dateEvent,eventName,eventCategory,eventAttendees)
+    textContainer.append(eventDate,eventName,eventCategory,eventAttendees)
+    eventsContainer.append(eventPicture, textContainer)
     eventsNear.append(eventsContainer)
   }
   createEvent()

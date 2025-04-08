@@ -137,12 +137,44 @@ body {
     text-underline-offset: 8px;
 }
 .eventsContainer {
-    
+    display: flex;
+    margin-top: 80px;
+    gap: 15px;
+    border-top: 1px solid rgb(217, 217, 217);
+    max-width: 600px;
+    width: 100%;
+    min-height: 160px;
+}
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 15px;
+    min-height: 160px;
+    position: relative;
+
 }
 .picture {
     width: 160px;
     height: 90px;
     border-radius: 8px;
+    margin-top: 15px;
+}
+.eventDate {
+    color: rgb(124, 111, 80);
+    font-size: 14px;
+    font-weight: bold;
+}
+.title {
+    font-size: 16px;
+}
+.category, .attendees {
+    color: rgb(112, 112, 112);
+    font-size: 14px;
+}
+.attendees {
+    position: absolute;
+    bottom: 15px;
 }
 .map_text {
     font-size: 12px;
