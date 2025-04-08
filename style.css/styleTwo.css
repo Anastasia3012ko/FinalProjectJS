@@ -74,7 +74,7 @@ body {
 .city {
     border-left: 1px solid rgb(217, 217, 217);
 }
-.search_input:focus, .language_name:focus {
+.search_input:focus, .language_name:focus, .selections > select {
     outline: none;
 }
 .authorization {
@@ -138,6 +138,23 @@ body {
     text-underline-offset: 8px;
     margin-bottom: 20px;
 }
+.selections {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+.selections > select {
+    flex: 1;
+    border-radius: 40px;
+    max-width: 145px;
+    background: rgb(246, 247, 248);
+    padding: 10px;
+    font-family: "Roboto", sans-serif;
+    color: rgb(33, 33, 33);
+    font-size: 14px;
+}
 .eventsContainer {
     display: flex;
     gap: 15px;
@@ -156,7 +173,8 @@ body {
 
 }
 .picture {
-    width: 160px;
+    max-width: 160px;
+    width: 100%;
     height: 90px;
     border-radius: 8px;
     margin-top: 15px;
@@ -348,7 +366,14 @@ body {
     .main {
         margin-bottom: 50px;
     }
-
+   .selections {
+    flex-direction: column;
+    margin-bottom: 30px;
+   }
+   .selections > select > option {
+    font-size: 12px;
+    
+   }
     .eventsContainer {
         gap: 8px;
         min-height: 100px;
