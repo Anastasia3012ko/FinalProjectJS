@@ -117,7 +117,7 @@ body {
     flex: 1;
     display: flex;
     justify-content: center;
-    
+    margin-bottom: 100px;
 }
 .main_container {
     max-width: 80vw;
@@ -131,14 +131,15 @@ body {
     margin-bottom: 15px;
 }
 .toEvents {
+    display: block;
     font-size: 20px;
     color: rgb(0, 121, 138);
     text-decoration-thickness: 4px;
     text-underline-offset: 8px;
+    margin-bottom: 20px;
 }
 .eventsContainer {
     display: flex;
-    margin-top: 80px;
     gap: 15px;
     border-top: 1px solid rgb(217, 217, 217);
     max-width: 600px;
@@ -186,6 +187,11 @@ body {
 .iframe {
     border-radius: 8px;
     margin-top: 12px;
+}
+
+@media all and (max-width: 500px) {
+    /* main */
+ 
 }
 
 /* footer */
@@ -276,6 +282,10 @@ body {
     .search {
         left: 12%;
     } 
+    .iframe {
+        width: 250px;
+        height: 180px
+    }
 }
 @media all and (max-width: 1100px) {
     .search {
@@ -285,11 +295,22 @@ body {
     .footer_menu_three {
         gap: 10px;
     }
+    .main_container {
+        max-width: 90vw;
+    }
+    .eventsContainer {
+        max-width: 500px;
+    }
 
+}
+@media all and (max-width: 850px) {
+    .map {
+        display: none;
+    }
 }
 @media all and (max-width: 500px) {
     .header {
-        margin-bottom: 25px;
+        margin-bottom: 80px;
     }
     .navbar {
         max-width: 90vw;
@@ -319,6 +340,38 @@ body {
         padding: 10px;
         font-size: 12px;
     }
+     /* main */
+     .heading_events {
+        font-size: 25px;
+        margin-bottom: 5px;
+    }
+    .main {
+        margin-bottom: 50px;
+    }
+
+    .eventsContainer {
+        gap: 8px;
+        min-height: 100px;
+    }
+    .textContainer {
+        flex: 2;
+        margin-top: 10px;
+        min-height: 100px;
+    }
+    .picture {
+        flex: 1;
+        max-width: 100px;
+        height: 55px;
+        border-radius: 8px;
+        margin-top: 10px;
+    }
+    .eventDate,.category, .title {
+        font-size: 10px;
+    }
+    .attendees {
+        display: none;
+    }
+
     .appStore, .forDesktop {
         display: none;
     } 
@@ -332,6 +385,5 @@ body {
         margin-left: 0;
         padding: 8px;
     }
-
-    
+ 
 }

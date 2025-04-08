@@ -1,7 +1,11 @@
+//to main page
+
 const returnToMainPage = document.querySelector('#companyLogo')
 returnToMainPage.addEventListener('click', ()=>{
     window.location.pathname = './index.html'
 })
+
+//events array
 
 const eventsStore = [
     {
@@ -64,9 +68,9 @@ const eventsStore = [
       distance: 15,
     },
   ];
-  
 
   // formate date in Array
+
     function formattedDate (date){
         const optionsOne = {
             weekday: 'short',
@@ -89,7 +93,8 @@ const eventsStore = [
 //create event element
 
   const  eventsNear =  document.querySelector('.eventsNear')
-  function createEvent () {
+
+  function createEvent(event) {
     const eventsContainer = document.createElement('div')
     eventsContainer.classList.add('eventsContainer')
 
@@ -97,30 +102,30 @@ const eventsStore = [
     textContainer.classList.add('textContainer')
 
     const eventPicture =  document.createElement('img')
-    eventPicture.src = eventsStore[0].image
+    eventPicture.src = event.image
     eventPicture.classList.add('picture')
 
     const eventDate =  document.createElement('p')
-    eventDate.textContent = formattedDate(eventsStore[0].date) 
+    eventDate.textContent = formattedDate(event.date) 
     eventDate.classList.add('eventDate')
 
     const eventName = document.createElement('h3')
-    eventName.textContent = eventsStore[0].title
+    eventName.textContent = event.title
     eventName.classList.add('title')
 
     const eventCategory = document.createElement('p')
-    eventCategory.textContent = `${eventsStore[0].category} (${eventsStore[0].distance} km)`
+    eventCategory.textContent = `${event.category} (${event.distance} km)`
     eventCategory.classList.add('category')
 
     const eventAttendees = document.createElement('p')
-    eventAttendees.textContent = `${eventsStore[0].attendees} attendees`
+    eventAttendees.textContent = `${event.attendees} attendees`
     eventAttendees.classList.add('attendees')
-
-
-
 
     textContainer.append(eventDate,eventName,eventCategory,eventAttendees)
     eventsContainer.append(eventPicture, textContainer)
     eventsNear.append(eventsContainer)
   }
-  createEvent()
+ 
+  eventsStore.forEach(item => {
+    createEvent(item)
+  })
