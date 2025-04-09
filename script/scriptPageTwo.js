@@ -68,8 +68,35 @@ const eventsStore = [
       distance: 15,
     },
   ];
+  
+// filtered array with events
+const type = document.querySelector('#type')
+const distance = document.querySelector('#distance')
+const category =  document.querySelector('#category')
 
-  // formate date in Array
+
+let filteredEvents =  eventsStore.filter(event => {
+  console.log(event.distance)
+  if(type.value !== 'any' && event.type !== type.value ) return false
+    if(distance.value !== 'any' && event.distance !== distance.value) return false 
+   
+
+    
+  if(category.value !== 'any' && event.category !== category.value) return false
+  return true
+})
+
+console.log(filteredEvents)
+
+ type.addEventListener('change', ()=>{ 
+  console.log(filteredEvents)
+  
+ })
+
+
+
+
+// formate date in Array
 
     function formattedDate (date){
         const optionsOne = {
