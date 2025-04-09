@@ -96,6 +96,11 @@ body {
     align-items: center;
     gap: 8px;
 }
+.language_name, .language_name > option,.login  {
+    color: rgb(33, 33, 33);
+    font-family: "Roboto", sans-serif;
+
+}
 .login {
     background-color: white;
     border: none;
@@ -157,7 +162,6 @@ body {
     flex-direction: column;
     max-width: 80vw;
     width: 100%;
-    border: 1px solid black;
     
 }
 .eventsNear {
@@ -270,9 +274,6 @@ body {
 .meetup_heading {
     font-size: 28px;
 }
-.meetup_text {
-    font-size: 16px;
-}
 .meetup_reg {
     max-width: 190px;
     width: 100%;
@@ -291,6 +292,7 @@ body {
     justify-content: space-between;
     margin-bottom: 80px;
 }
+
 .categorie {
     display: flex;
     flex-direction: column;
@@ -396,8 +398,109 @@ body {
     color: rgb(112, 112, 112);
 }
 
+@media all and (max-width: 1200px) {
 
+}
+@media all and (max-width: 1100px) {
 
+}
+@media all and (max-width: 500px) {
+    .heading_eventsNear, .meetup_heading {
+        font-size: 20px;
+    }
+    .eventsNear, .meetup_reg {
+        margin-bottom: 15px;
+    }
+    .see_all_events, .unit_desktop {
+        display: none;
+    }
+    .select_city::placeholder {
+        font-size: 14px;
+    }
+    .write_city {
+        max-width: 190px;
+    }
+    .events_container_unit, .container_friendships, .meetup_works {
+        flex-direction: column;
+    }
+    .join_meetup {
+        flex-direction: column;
+        padding: 10px;
+        gap: 15px;
+    }
+    .meetup {
+        align-items: center;
+    }
+    .meetup_heading {
+        align-self: flex-start;
+
+    }
+    .logo_hands {
+        max-width: 240px;
+        order: -1;
+
+    }
+
+    .container_categiries {
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .city_image {
+        max-width: 155px;
+    }
+    .container_popularCities {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    .meetup_works, .meetup_works_info {
+        gap: 10px;
+    }
+    .meetup_works_unit {
+        gap: 15px;
+    }
+    .container_for_event {
+        flex-direction: row;
+        align-items: flex-start;
+        border-top: 1px solid  rgb(217, 217, 217);
+        padding-top: 10px;
+    }
+    .event_Photo {
+        max-width: 98px;
+        min-height: 55px;
+    }
+    .all_about_event {
+       max-width: auto;
+        
+    }
+    .friendships {
+        margin-bottom: 40px;
+    }
+    .small_heading {
+        font-size: 16px;
+    }
+    .par_onMeetup, .link_goto,.looking_city {
+    
+        font-size: 12px;
+    }
+    .par, .event_name, .event_category,.date,.going, .free {
+        font-size: 10px;
+    }
+    .icon_mobi {
+        max-width: 25px;
+        width: 100%;
+    }
+    .icon_small {
+        max-width: 14px;
+        width: 100%;
+    }
+    .all_about_event {
+        gap: 5px;
+    }
+   
+    
+}
 
 /* footer */
 
@@ -572,7 +675,7 @@ body {
     .appStore, .forDesktop {
         display: none;
     } 
-    .footer_menu_one, .footer_menu_two, .followUs, .footer_menu_three {
+    .footer_menu_one, .footer_menu_two, .followUs, .footer_menu_three, .main_container {
         max-width: 90vw;
     }
     .footer_menu_one {
