@@ -339,9 +339,63 @@ body {
     max-width: 205px;
     width: 100%;
 }
-.city_name {
+.small_heading {
     font-size: 20px;
 }
+.meetup_works {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+.meetup_works_unit {
+    display: flex;
+    align-items: flex-start;
+    background-color:rgba(151, 202, 209, 0.08);
+    border-radius: 8px;
+    padding: 30px;
+    gap: 30px;
+    max-width: 580px;
+    width: 100%;
+}
+.meetup_works_info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 380px;
+    width: 100%;
+}
+.small_heading {
+}
+.par {
+}
+.link_goto {
+    text-decoration: none;
+    font-size: 16px;
+    color: rgb(0, 121, 138);
+}
+
+.container_friendships {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+.friendships {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 376px;
+    width: 100%;
+}
+.images_onMeetup {
+    width: 100%;
+}
+
+.par_onMeetup {
+    font-size: 16px;
+    line-height: 24px;
+    color: rgb(112, 112, 112);
+}
+
 
 
 
