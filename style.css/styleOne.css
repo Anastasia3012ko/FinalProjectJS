@@ -1,27 +1,40 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url(/style.css/reset.css);
+
+:root {
+    --primary-color: rgb(33, 33, 33);
+    --secondary-color: rgb(0, 121, 138);
+    --additional-color: rgba(151, 202, 209, 0.08);
+    --one-color: rgb(112, 112, 112);
+    --font-family: "Roboto", sans-serif; 
+    --font-size: 16px;
 }
-button, a {
-    cursor: pointer;
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    color: var(--primary-color);
 }
-button, input, select {
+input, select {
     border: none;
 }
-input {
-    font-family: "Roboto", sans-serif;
+button, input, select {
+    font-family: var(--font-family);
 }
-body {
-    font-family: "Roboto", sans-serif;
-    color: rgb(33, 33, 33);
+p {
+    line-height: 24px;
 }
 .wrapper {
     display: flex;
     flex-direction: column;
     overflow: clip;
     min-height: 100%;
-    
+}
+
+.about, .main_container, .footer_menu_one, 
+.footer_menu_two, .followUs, .footer_menu_three {
+    display: flex;
+    max-width: 80vw;
+    width: 100%;
 }
 
 /* header */
@@ -51,8 +64,6 @@ body {
     padding-left: 10px;
     max-width: 600px;
     width: 100%;
-    
-
 }
 .material-symbols-outlined {
     align-self: center;
@@ -69,10 +80,10 @@ body {
 
 .search_input {
     padding-left: 10px;
-    font-size: 16px;
+    font-size: var(--font-size);
     max-width: 300px;
     width: 100%;
-    color: rgb(112, 112, 112)
+    color: var(--one-color);
 }
 .city {
     border-left: 1px solid rgb(217, 217, 217);
@@ -97,34 +108,26 @@ body {
     gap: 8px;
 }
 .language_name, .language_name > option,.login  {
-    color: rgb(33, 33, 33);
-    font-family: "Roboto", sans-serif;
-
+    color: var(--primary-color);
+    font-family: var(--font-family);
 }
 .login {
     background-color: white;
-    border: none;
-    max-width: 85px;
-    width: 100%;
 }
-.singup {
+.singup, .login {
     max-width: 85px;
     width: 100%;
 }
 .btn {
-    border-radius: 8px;
-    background-color: rgb(0, 121, 138);
+    background-color: var(--secondary-color);
     color: white;
     padding: 15px;
     font-size: 14px;
 }
 .about {
-    display: flex;
     justify-content: flex-start;
     align-self: center;
     gap: 80px;
-    max-width: 80vw;
-    width: 100%;
     margin-top: 80px;
 }
 .description {
@@ -138,10 +141,6 @@ body {
 .heading {
     font-size: 42px;
     text-align: left;
-}
-.text_about {
-    font-weight: 16px;
-    line-height: 25px;
 }
 .toSecondPage {
     max-width: 125px;
@@ -158,11 +157,7 @@ body {
     align-items: center;
 }
 .main_container {
-    display: flex;
     flex-direction: column;
-    max-width: 80vw;
-    width: 100%;
-    
 }
 .eventsNear {
     display: flex;
@@ -170,45 +165,40 @@ body {
     position: relative;
     gap: 20px;
     margin-bottom: 35px;
-    
 }
 .heading_eventsNear {
     font-size: 28px;
 }
 .write_city {
-    background-color: rgba(151, 202, 209, 0.12);
-    border-radius: 8px;
-    padding-right: 15px;
-    max-width:  250px;
-    width: 100%;
     display: flex;
     justify-content: space-between;
+    max-width: 250px;
+    width: 100%;
+    border-radius: 8px;
+    padding-right: 15px;
+    background-color: var(--additional-color);
 }
 .select_city {
-    background-color: rgba(151, 202, 209, 0.03);; 
-    box-shadow: none;
     width: 80%;
     border-radius: 8px;
     padding: 10px;
-}
+    background-color: rgba(151, 202, 209, 0.03);; 
+    box-shadow: none;
+    }
 .select_city::placeholder{
-    color: rgb(0, 121, 138);
+    color: var(--secondary-color);
     font-size: 20px;
     font-weight: 400;
-    
 }
 .see_all_events {
-    text-decoration: none;
-    font-size: 16px;
-    color: rgb(0, 121, 138);
+    font-size: var(--font-size);
+    color: var(--secondary-color);
     position: absolute;
     right: 0;
 }
 .events_container {
    display: flex;
    flex-direction: column;
-   
-   
 }
 .events_container_unit {
     display: flex;
@@ -221,15 +211,15 @@ body {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    
+    max-width: 272px;
+    width: 100%;
 }
 .all_about_event {
-    max-width: 95%;
-    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    
+    max-width: 95%;
+    width: 100%;
 }
 .event_Photo {
     max-width: 270px;
@@ -242,11 +232,11 @@ body {
 }
 .event_category {
     font-size: 14px;
-    color:rgb(112, 112, 112);
+    color: var(--one-color);
 }
 .event_date, .event_info {
-    display: flex;gap: 5px;
-    font-size: 16px;
+    display: flex;
+    gap: 5px;
 }
 .date {
     font-size: 14px;
@@ -254,22 +244,20 @@ body {
 }
 .going {
     margin-right: 20px;
-    
 }
 .join_meetup {
     display: flex;
     align-items: center;
-    padding: 20px 80px;
     gap: 80px;
-    background-color: rgba(151, 202, 209, 0.08);
+    padding: 20px 80px;
     border-radius: 8px;
+    background-color: var(--additional-color);
     margin-bottom: 80px;
 }
 .meetup {
     display: flex;
     flex-direction: column;
     gap: 15px;
-
 }
 .meetup_heading {
     font-size: 28px;
@@ -277,7 +265,6 @@ body {
 .meetup_reg {
     max-width: 190px;
     width: 100%;
-    border-radius: 8px;
     padding: 14px;
     color: white;
     background-color: rgb(227, 35, 89);
@@ -286,7 +273,6 @@ body {
     max-width: 340px;
     width: 100%;
 }
-
 .container_categiries {
     display: flex;
     justify-content: space-between;
@@ -300,13 +286,11 @@ body {
     justify-content: center;
     text-align: center;
     gap: 10px;
-    font-size: 16px;
     max-width: 135px;
     width: 100%;
     padding: 20px;
-    background-color: rgba(151, 202, 209, 0.08);
+    background-color: var(--additional-color);
     border-radius: 8px;
-
 }
 .icon_categorie {
     flex: 1;
@@ -315,15 +299,13 @@ body {
 .name_categorie {
     flex: 1;
     justify-self: flex-start;
-    
 }
 .cities {
     flex-direction: column;
     align-items: flex-start;
-    
 }
 .looking_city {
-    color: rgb(112, 112, 112);
+    color: var(--one-color);
 }
 .container_popularCities {
     display: flex;
@@ -352,12 +334,12 @@ body {
 .meetup_works_unit {
     display: flex;
     align-items: flex-start;
-    background-color:rgba(151, 202, 209, 0.08);
-    border-radius: 8px;
-    padding: 30px;
     gap: 30px;
     max-width: 580px;
     width: 100%;
+    border-radius: 8px;
+    padding: 30px;
+    background-color: var(--additional-color);
 }
 .meetup_works_info {
     display: flex;
@@ -366,14 +348,9 @@ body {
     max-width: 380px;
     width: 100%;
 }
-.small_heading {
-}
-.par {
-}
 .link_goto {
-    text-decoration: none;
-    font-size: 16px;
-    color: rgb(0, 121, 138);
+    font-size: var(--font-size);
+    color: var(--secondary-color);
 }
 
 .container_friendships {
@@ -393,16 +370,52 @@ body {
 }
 
 .par_onMeetup {
-    font-size: 16px;
-    line-height: 24px;
-    color: rgb(112, 112, 112);
+    color: var(--one-color);
 }
 
-@media all and (max-width: 1200px) {
+/* media for main section */
 
+@media all and (max-width: 1300px) {
+    .events_container_unit {
+        gap: 20px;
+    }
+    .event_Photo  {
+        max-width: 200px;
+        min-height:83px;
+    }
+    .categorie, .meetup_works_unit, .friendships {
+        margin-right: 10px;
+    }
 }
-@media all and (max-width: 1100px) {
 
+@media all and (max-width: 1000px) {
+    .main_container {
+        max-width: 85vw;
+    }
+    .events_container_unit, .container_categiries {
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+    .container_categiries {
+        gap: 10px;
+    }
+    .join_meetup {
+        flex-direction: column;
+        padding: 10px;
+        gap: 15px;
+    }
+}
+@media all and (max-width: 750px){
+    .icon_small {
+        max-width: 16px;
+        width: 100%;
+    }
+    .small_heading {
+        font-size: 18px;
+    }
+    .event_info {
+        gap: 3px;
+    }
 }
 @media all and (max-width: 500px) {
     .heading_eventsNear, .meetup_heading {
@@ -423,26 +436,17 @@ body {
     .events_container_unit, .container_friendships, .meetup_works {
         flex-direction: column;
     }
-    .join_meetup {
-        flex-direction: column;
-        padding: 10px;
-        gap: 15px;
-    }
     .meetup {
         align-items: center;
     }
     .meetup_heading {
         align-self: flex-start;
-
     }
     .logo_hands {
         max-width: 240px;
         order: -1;
-
     }
-
     .container_categiries {
-        flex-wrap: wrap;
         gap: 20px;
         justify-content: center;
     }
@@ -472,16 +476,14 @@ body {
     }
     .all_about_event {
        max-width: auto;
-        
     }
     .friendships {
         margin-bottom: 40px;
     }
     .small_heading {
-        font-size: 16px;
+        font-size: var(--font-size);
     }
     .par_onMeetup, .link_goto,.looking_city {
-    
         font-size: 12px;
     }
     .par, .event_name, .event_category,.date,.going, .free {
@@ -493,13 +495,10 @@ body {
     }
     .icon_small {
         max-width: 14px;
-        width: 100%;
     }
     .all_about_event {
         gap: 5px;
     }
-   
-    
 }
 
 /* footer */
@@ -507,24 +506,17 @@ body {
 
 .footer {
     min-height: 560px;
-    background-color: rgb(33, 33, 33);
+    background-color: var(--primary-color);
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.footer_menu_one, .footer_menu_two, .followUs, .footer_menu_three {
-   max-width: 80vw;
-   width: 100%; 
-   display: flex;
-}
-
 .footer_menu_one {
     align-items: center;
     padding: 20px 0;
     border-bottom: 1px solid rgb(217, 217, 217);
 }
 .create {
-    font-size: 16px;
     font-weight: 600;
     color: white;
 }
@@ -532,12 +524,11 @@ body {
     max-width: 130px;
     width: 100%;
     padding: 15px;
-    border-radius: 8px;
     border: 3px solid white;
-    background-color: rgb(33, 33, 33);
+    background-color: var(--primary-color);
     color: white;
     font-weight: 500;
-    font-size: 16px;
+    font-size: var(--font-size);
     margin-left: 50px;
 }
 .footer_menu_two {
@@ -552,12 +543,10 @@ body {
 }
 .footer_heading {
     color: white;
-    font-size: 16px;
     font-weight: 400;
 }
 .footer_link {
     color: white;
-    text-decoration: none;
     font-size: 14px;
     font-weight: 300;
 }
@@ -569,7 +558,6 @@ body {
 .social_media {
     display: flex;
     justify-content: space-between;
-    
 }
 .icons {
     display: flex;
@@ -586,10 +574,7 @@ body {
     margin-top: 30px;
 }
 
-
-
-
-
+/* media for header and footer */
 
 @media all and (max-width: 1200px) {
     .search {
@@ -600,7 +585,6 @@ body {
         height: 240px;
         align-self: center;
     }
-    
 }
 @media all and (max-width: 1100px) {
     .search {
@@ -613,12 +597,10 @@ body {
     .logo_bike {
         width: 280px;
         height: 170px;
-        
     }
     .footer_menu_three {
         gap: 10px;
     }
-
 }
 @media all and (max-width: 500px) {
     .header {
@@ -640,22 +622,15 @@ body {
         right: 0;
         gap: 3px;
         max-width: 220px;
-        
     }
-    .login {
-        max-width: 70px;
-    }
-    .singup {
+    .login, .singup {
         max-width: 70px;
     }
     .btn {
         padding: 10px;
         font-size: 12px;
     }
-    
-  
     .about {
-        max-width: 90vw;
         flex-direction: column;
         gap: 10px;
     }
@@ -675,7 +650,7 @@ body {
     .appStore, .forDesktop {
         display: none;
     } 
-    .footer_menu_one, .footer_menu_two, .followUs, .footer_menu_three, .main_container {
+    .footer_menu_one, .footer_menu_two, .followUs, .footer_menu_three, .about, .main_container {
         max-width: 90vw;
     }
     .footer_menu_one {
@@ -685,8 +660,6 @@ body {
         margin-left: 0;
         padding: 8px;
     }
-
-    
 }
 
 

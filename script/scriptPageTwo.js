@@ -70,31 +70,45 @@ const eventsStore = [
   ];
   
 // filtered array with events
-const type = document.querySelector('#type')
-const distance = document.querySelector('#distance')
-const category =  document.querySelector('#category')
+const typeSelect = document.querySelector('#type')
+const distanceSelect = document.querySelector('#distance')
+const categorySelect =  document.querySelector('#category')
 
+function filterEvents (array) {
+  const type = typeSelect.value
+  const distance = distanceSelect.value
+  const category = categorySelect.value
 
-let filteredEvents =  eventsStore.filter(event => {
-  console.log(event.distance)
-  if(type.value !== 'any' && event.type !== type.value ) return false
-    if(distance.value !== 'any' && event.distance !== distance.value) return false 
-   
+  let filteredEvents = array
 
-    
-  if(category.value !== 'any' && event.category !== category.value) return false
-  return true
+  if(type !== 'any') {
+    filteredEvents = filteredEvents.filter(item => item.type === type)
+  }  
+
+  if(distance !== 'any'){
+      const [min,max] =distance.split('-').map(Number)
+      filteredEvents = filteredEvents.filter(item => {
+        if(item.type === 'online') return true
+        return item.distance >=min && item.distance <= max
+      })
+  }
+     
+  if(category !== 'any') {
+    filteredEvents = filteredEvents.filter(item => item.category === category)
+  }
+
+  displayEvents.innerHTML = ''
+
+  filteredEvents.forEach(event => {
+    createEvent(event)
+  })
+}
+
+[typeSelect,distanceSelect,categorySelect].forEach(item => {
+  item.addEventListener('change', ()=>{
+    filterEvents(eventsStore)
+  })
 })
-
-console.log(filteredEvents)
-
- type.addEventListener('change', ()=>{ 
-  console.log(filteredEvents)
-  
- })
-
-
-
 
 // formate date in Array
 
@@ -119,18 +133,32 @@ console.log(filteredEvents)
 
 //create event element
 
-  const  eventsNear =  document.querySelector('.eventsNear')
+  const  eventsNear =  document.querySelector('.eventsNear') 
+  const displayEvents = document.createElement('div')
+  displayEvents.classList.add('display')
+  eventsNear.append(displayEvents)
+
 
   function createEvent(event) {
-    const eventsContainer = document.createElement('div')
-    eventsContainer.classList.add('eventsContainer')
-
+    const eventContainer = document.createElement('div')
+    eventContainer.classList.add('eventContainer')
+    
     const textContainer = document.createElement('div')
     textContainer.classList.add('textContainer')
 
+    const containerImages = document.createElement('div')
+    containerImages.classList.add('containerImages')
     const eventPicture =  document.createElement('img')
     eventPicture.src = event.image
     eventPicture.classList.add('picture')
+    containerImages.append(eventPicture)
+
+    if(event.type === 'online'){
+      const onlinePicture = document.createElement('img')
+      onlinePicture.src = 'images/online.png'
+      onlinePicture.classList.add('online')
+      containerImages.append(onlinePicture)
+    }
 
     const eventDate =  document.createElement('p')
     eventDate.textContent = formattedDate(event.date) 
@@ -144,13 +172,24 @@ console.log(filteredEvents)
     eventCategory.textContent = `${event.category} (${event.distance} km)`
     eventCategory.classList.add('category')
 
+    if(event.type === 'online'){
+      const onlinePictureTwo = document.createElement('img')
+      onlinePictureTwo.src = 'images/online.png'
+      onlinePictureTwo.classList.add('onlineTwo')
+      textContainer.append(onlinePictureTwo)
+    }
+
+
     const eventAttendees = document.createElement('p')
-    eventAttendees.textContent = `${event.attendees} attendees`
-    eventAttendees.classList.add('attendees')
+     if(event.attendees){
+      eventAttendees.textContent = `${event.attendees} attendees`
+      eventAttendees.classList.add('attendees')
+    }
+    
 
     textContainer.append(eventDate,eventName,eventCategory,eventAttendees)
-    eventsContainer.append(eventPicture, textContainer)
-    eventsNear.append(eventsContainer)
+    eventContainer.append(containerImages, textContainer)
+    displayEvents.append(eventContainer)
   }
  
   eventsStore.forEach(item => {
