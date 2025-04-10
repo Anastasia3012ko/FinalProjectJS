@@ -1,7 +1,7 @@
 //to main page
 
-const returnToMainPage = document.querySelector('#companyLogo')
-returnToMainPage.addEventListener('click', ()=>{
+const returnToHomePage = document.querySelector('#companyLogo')
+returnToHomePage.addEventListener('click', ()=>{
     window.location.pathname = './index.html'
 })
 
